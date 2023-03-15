@@ -1,0 +1,21 @@
+:root {
+  --mobile-breakpoint: 375px;
+  /* --desktop-breakpoint: 1440px; */
+  --desktop-breakpoint: 768px;
+
+  --active-input-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+
+  --red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+
+  --default-browser-size: 16;
+  --default-font-size: 18;
+  --site-font-size: calc(18rem / var(--default-browser-size));
+  --site-font-family: 'Space Grotesk', sans-serif;
+
+  --attribution-font-size: calc(11rem / var(--default-browser-size));
+  --attribution-text-color: inherit;
+  --attribution-link-color: var(--very-dark-violet);
+}
