@@ -2,6 +2,7 @@
 @import "/css/_theme.css";
 @import "/css/_header.css";
 @import "/css/_main.css";
+@import '/css/_footer.css';
 
 *,
 *::before,
@@ -13,6 +14,7 @@ body {
   margin: 0;
   font: var(--site-font-size) var(--site-font-family);
   display: flex;
+  flex-direction: column;
 }
 
 fieldset {
@@ -58,16 +60,6 @@ button {
   color: var(--white);
   background: black;
   border: 0;
-}
-
-.attribution { 
-  font-size: var(--attribution-font-size); 
-  text-align: center;
-  color: var(--attribution-text-color);
-}
-
-.attribution__link { 
-  color: var(--attribution-link-color);
 }
 
 
