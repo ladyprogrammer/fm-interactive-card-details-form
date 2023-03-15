@@ -1,0 +1,78 @@
+@import "/css/_fonts.css";
+@import "/css/_theme.css";
+@import "/css/_header.css";
+@import "/css/_main.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: var(--site-font-size) var(--site-font-family);
+  display: flex;
+  background: url('/assets/images/bg-main-mobile.png') no-repeat;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+input {
+  --border-color: color-mix(in HSL, var(--very-dark-violet), white 50%);
+  outline: 0;
+  border: 1px solid var(--light-grayish-violet);
+  border-radius: 10px;
+  color: var(--very-dark-violet);
+  padding: 16px;
+  font-size: 16px;
+  margin: 10px 0 0;
+  display: block;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--light-grayish-violet);
+  /* Fix firefox opacity */
+  opacity: 1;
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--white);
+  background: black;
+  border: 0;
+}
+
+.attribution { 
+  font-size: var(--attribution-font-size); 
+  text-align: center;
+  color: var(--attribution-text-color);
+}
+
+.attribution__link { 
+  color: var(--attribution-link-color);
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url('/assets/images/bg-main-desktop.png') no-repeat;
+  }
+}

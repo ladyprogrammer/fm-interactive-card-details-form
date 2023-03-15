@@ -1,0 +1,47 @@
+.main {
+  position: relative;
+  top: 300px;
+  padding: 25px;
+  color: var(--very-dark-violet);
+}
+
+.card-form {
+  width: 100%;
+  display: grid;
+  gap: 20px 10px;
+  grid-template-areas: "name name name"
+    "digits digits digits"
+    "expiry expiry cvc"
+    "button button button";
+}
+
+.card-form__cardholder {
+  grid-area: name;
+}
+
+.card-form__card-number {
+  grid-area: digits;
+}
+
+.card-form__digits {
+  grid-area: digits;
+}
+
+.card-form__expiry-date {
+  display: flex;
+  grid-area: expiry;
+  gap: 10px;
+}
+
+.card-form__cvc {
+  grid-area: cvc;
+}
+
+.card-form__confirm-button {
+  grid-area: button;
+  padding: 15px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+}
