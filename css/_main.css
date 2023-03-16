@@ -1,8 +1,9 @@
 .main {
+  grid-area: form;
   position: relative;
-  top: 300px;
   padding: 25px;
   color: var(--very-dark-violet);
+  margin-top: 250px;
 }
 
 .card-form {
@@ -45,3 +46,4 @@
   margin: 10px 0 20px;
   border-radius: 10px;
 }
+

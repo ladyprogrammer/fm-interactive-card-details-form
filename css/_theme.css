@@ -16,6 +16,6 @@
   --site-font-family: 'Space Grotesk', sans-serif;
 
   --attribution-font-size: calc(11rem / var(--default-browser-size));
-  --attribution-text-color: inherit;
+  --attribution-text-color: var(--very-dark-violet);
   --attribution-link-color: var(--very-dark-violet);
 }

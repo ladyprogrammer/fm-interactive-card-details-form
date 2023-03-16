@@ -6,109 +6,127 @@
 }
 
 .header {
-  position: relative;
+  grid-area: header;
+  display: none;
 }
 
-.card-back {
-  position: absolute;
-  top: calc(30em / var(--default-font-size));
-  left: calc(70em / var(--default-font-size));
-  width: var(--mobile-card-width);
-  height: var(--mobile-card-height);
-  background: url('/assets/images/bg-card-back.png') no-repeat;
-  background-size: contain;
+
+
+@media (min-width: 375px) {
+  .header {
+    display: initial;
+    position: relative;
+    height: 300px;
+  }
+  
+  .card-back {
+    position: absolute;
+    top: calc(30em / var(--default-font-size));
+    left: calc(70em / var(--default-font-size));
+    width: var(--mobile-card-width);
+    height: var(--mobile-card-height);
+    background: url('/assets/images/bg-card-back.png') no-repeat;
+    background-size: contain;
+  }
+  
+  .card-back__cvv {
+    color: var(--white);
+    position: absolute;
+    top: calc(125em / var(--default-font-size));
+    right: calc(60em / var(--default-font-size));
+    font-size: calc(10em / var(--default-font-size));
+  }
+  
+  .card-front {
+    color: var(--white);
+    position: absolute;
+    top: calc(130em / var(--default-font-size));
+    left: calc(15em / var(--default-font-size));
+    width: var(--mobile-card-width);
+    height: var(--mobile-card-height);
+    background: url('/assets/images/bg-card-front.png') no-repeat;
+    background-size: contain;
+    display: grid;
+    grid-template-columns: min-content min-content min-content min-content;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+      "circle . . ."
+      "digits-1 digits-2 digits-3 digits-4"
+      "name name name expiry";
+    gap: calc(10em / var(--default-font-size));
+    padding: calc(20em / var(--default-font-size));
+    justify-content: space-evenly;
+  }
+  
+  .card-front__circle {
+    grid-area: circle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-front__circle-filled {
+    --circle-diameter: calc(30em / var(--default-font-size));
+    height: var(--circle-diameter);
+    width: var(--circle-diameter);
+    border-radius: 50%;
+    background: var(--white);
+  }
+  
+  .card-front__circle-empty {
+    --circle-diameter: calc(12em / var(--default-font-size));
+    height: var(--circle-diameter);
+    width: var(--circle-diameter);
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    opacity: 0.8;
+  }
+  
+  .card-front__card-digits {
+    letter-spacing: calc(2rem / var(--default-browser-size));
+    align-self: self-end;
+  }
+  
+  .card-front__card-digits-1 {
+    grid-area: digits-1;
+  }
+  
+  .card-front__card-digits-2 {
+    grid-area: digits-2;
+  }
+  
+  .card-front__card-digits-3 {
+    grid-area: digits-3;
+  }
+  
+  .card-front__card-digits-4 {
+    grid-area: digits-4;
+  }
+  
+  .card-front__cardholder {
+    grid-area: name;
+    text-transform: uppercase;
+    font-size: calc(10rem / var(--default-browser-size));
+    opacity: 0.7;
+    letter-spacing: calc(1rem / var(--default-browser-size));
+  }
+  
+  .card-front__expiry-date {
+    grid-area: expiry;
+    font-size: calc(11rem / var(--default-font-size));
+    opacity: 0.7;
+    justify-self: right;
+  }
 }
 
-.card-back__cvv {
-  color: var(--white);
-  position: absolute;
-  top: calc(125em / var(--default-font-size));
-  right: calc(60em / var(--default-font-size));
-  font-size: calc(10em / var(--default-font-size));
-}
 
-.card-front {
-  color: var(--white);
-  position: absolute;
-  top: calc(130em / var(--default-font-size));
-  left: calc(15em / var(--default-font-size));
-  width: var(--mobile-card-width);
-  height: var(--mobile-card-height);
-  background: url('/assets/images/bg-card-front.png') no-repeat;
-  background-size: contain;
-  display: grid;
-  grid-template-columns: min-content min-content min-content min-content;
-  grid-template-rows: min-content auto min-content;
-  grid-template-areas:
-    "circle . . ."
-    "digits-1 digits-2 digits-3 digits-4"
-    "name name name expiry";
-  gap: calc(10em / var(--default-font-size));
-  padding: calc(20em / var(--default-font-size));
-  justify-content: space-evenly;
-}
 
-.card-front__circle {
-  grid-area: circle;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+@media (min-width: 1440px) {
+  .header {
+    height: initial;
+    width: 800px;
+  }
 
-.card-front__circle-filled {
-  --circle-diameter: calc(30em / var(--default-font-size));
-  height: var(--circle-diameter);
-  width: var(--circle-diameter);
-  border-radius: 50%;
-  background: var(--white);
-}
-
-.card-front__circle-empty {
-  --circle-diameter: calc(12em / var(--default-font-size));
-  height: var(--circle-diameter);
-  width: var(--circle-diameter);
-  border-radius: 50%;
-  border: 1px solid var(--white);
-  opacity: 0.8;
-}
-
-.card-front__card-digits {
-  letter-spacing: calc(2rem / var(--default-browser-size));
-  align-self: self-end;
-}
-
-.card-front__card-digits-1 {
-  grid-area: digits-1;
-}
-
-.card-front__card-digits-2 {
-  grid-area: digits-2;
-}
-
-.card-front__card-digits-3 {
-  grid-area: digits-3;
-}
-
-.card-front__card-digits-4 {
-  grid-area: digits-4;
-}
-
-.card-front__cardholder {
-  grid-area: name;
-  text-transform: uppercase;
-  font-size: calc(10rem / var(--default-browser-size));
-  opacity: 0.7;
-  letter-spacing: calc(1rem / var(--default-browser-size));
-}
-
-.card-front__expiry-date {
-  grid-area: expiry;
-  font-size: calc(11rem / var(--default-font-size));
-  opacity: 0.7;
-  justify-self: right;
-}
-
-@media (min-width: 768px) {
   .card-back {
     top: calc(470em / var(--default-browser-size));
     left: calc(260em / var(--default-browser-size));

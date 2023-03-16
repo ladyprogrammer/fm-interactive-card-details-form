@@ -1,0 +1,19 @@
+.attribution {
+  grid-area: attribution;
+  font-size: var(--attribution-font-size); 
+  text-align: center;
+  color: var(--attribution-text-color);
+  margin: 10px;
+}
+
+.attribution__link { 
+  color: var(--attribution-link-color);
+}
+
+
+
+@media (min-width: 1440px) {
+  .attribution {
+    margin-top: 200px;
+  }
+}
