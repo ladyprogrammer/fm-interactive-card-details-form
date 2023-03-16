@@ -13,8 +13,10 @@
 body {
   margin: 0;
   font: var(--site-font-size) var(--site-font-family);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: "header"
+    "form"
+    "attribution";
 }
 
 fieldset {
@@ -72,9 +74,12 @@ button {
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   body {
     background: url('/assets/images/bg-main-desktop.png') no-repeat;
+    grid-template-areas: "header form"
+      ". attribution";
+    grid-template-columns: "auto 380px";
   }
 }
 

@@ -40,15 +40,15 @@
       <fieldset class="card-form__expiry-date">
         <legend>Exp. Date (mm/yy)</legend>
         <label class="card-form__expiry-date-mm">
-          <input placeholder="MM">
+          <input placeholder="MM" pattern="[0-9]{2}" maxlength="2">
         </label>
         <label class="card-form__expiry-date-yy"> 
-          <input placeholder="YY">
+          <input placeholder="YY" pattern="[0-9]{2}" maxlength="2">
         </label>
       </fieldset>
       <label class="card-form__cvc">
         CVC
-        <input placeholder="e.g. 123">
+        <input placeholder="e.g. 123" maxlength="3">
       </label>
       <button class="card-form__confirm-button">Confirm</button>
     </form>

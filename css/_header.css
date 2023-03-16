@@ -6,6 +6,7 @@
 }
 
 .header {
+  grid-area: header;
   display: none;
 }
 
@@ -118,7 +119,14 @@
   }
 }
 
-@media (min-width: 768px) {
+
+
+@media (min-width: 1440px) {
+  .header {
+    height: initial;
+    width: 800px;
+  }
+
   .card-back {
     top: calc(470em / var(--default-browser-size));
     left: calc(260em / var(--default-browser-size));
