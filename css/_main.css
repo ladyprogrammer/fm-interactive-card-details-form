@@ -16,6 +16,20 @@
     "button button button";
 }
 
+.card-form__input-error {
+  color: var(--red);
+  text-transform: initial;
+  visibility: hidden;
+}
+
+.show-error .card-form__input-error {
+  visibility: visible;
+}
+
+.show-error .card-form__input {
+  border-color: var(--red);
+}
+
 .card-form__cardholder {
   grid-area: name;
 }
