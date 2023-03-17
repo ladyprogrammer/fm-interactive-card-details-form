@@ -9,20 +9,21 @@
 </head>
 <body>
   <header class="header">
+    <h1 class="header__title">Card Preview</h1>
     <div class="card-back">
       <span class="card-back__cvv">000</span>
     </div>
 
     <div class="card-front">
       <div class="card-front__circle">
-        <span class="card-front__circle-filled"></span>
-        <span class="card-front__circle-empty"></span>
+        <div class="card-front__circle-filled"></div>
+        <div class="card-front__circle-empty"></div>
       </div>
       <span class="card-front__card-digits card-front__card-digits-1">0000</span>
       <span class="card-front__card-digits card-front__card-digits-2">0000</span>
       <span class="card-front__card-digits card-front__card-digits-3">0000</span>
       <span class="card-front__card-digits card-front__card-digits-4">0000</span>
-      <span class="card-front__cardholder">Jane Appleseed</span>
+      <div class="card-front__cardholder">Jane Appleseed</div>
       <span class="card-front__expiry-date">
         <span class="card-front__expiry-date-mm">00</span>/<span class="card-front__expiry-date-yy">00</span>
       </span>
@@ -61,7 +62,7 @@
 
     <section class="thanks">
       <img src="./assets/images/icon-complete.svg" alt="icon-complete">
-      <h1 class="thanks__title">Thank you!</h1>
+      <h2 class="thanks__title">Thank you!</h2>
       <p class="thanks__description">We've added your card details</p>
       <button class="thanks__continue-button">Continue</button>
     </section>
