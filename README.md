@@ -69,6 +69,7 @@ My current focus is mainly developing web applications using Angular which I am 
 - [Caniuse](https://caniuse.com/) - Must bookmark. Handy tool for checking cross browser compatibility so you don't have to manually check every browser every time before you use them in code.
 - [Regular Expressions](https://regex101.com/) - Must bookmark. Handy tool for writing regular expressions.
 - [JavaScript String Methods | W3Schools](https://www.w3schools.com/js/js_string_methods.asp) - Still relevant and updated, what I like best about the site is that I can try out the simple examples and modify them.
+- [Invisible Content Just for Screen Reader Usersi](https://webaim.org/techniques/css/invisiblecontent/) - to pass accessibility
 
 ## Author
 
