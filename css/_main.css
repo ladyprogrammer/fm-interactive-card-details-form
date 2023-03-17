@@ -3,7 +3,6 @@
   position: relative;
   padding: 25px;
   color: var(--very-dark-violet);
-  margin-top: 250px;
 }
 
 .card-form {
@@ -19,11 +18,11 @@
 .card-form__input-error {
   color: var(--red);
   text-transform: initial;
-  visibility: hidden;
+  display: none;
 }
 
 .show-error .card-form__input-error {
-  visibility: visible;
+  display: initial;
 }
 
 .show-error .card-form__input {
@@ -61,3 +60,9 @@
   border-radius: 10px;
 }
 
+
+@media (min-width: 1440px) {
+  .main {
+    margin-top: 250px;
+  }
+}

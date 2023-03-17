@@ -11,11 +11,17 @@
   --very-dark-violet: hsl(278, 68%, 11%);
 
   --default-browser-size: 16;
-  --default-font-size: 18;
+  --default-font-size: 18;  
+  --rem-divider: var(--default-browser-size);
+  --em-divider: var(--default-font-size);
   --site-font-size: calc(18rem / var(--default-browser-size));
   --site-font-family: 'Space Grotesk', sans-serif;
 
   --attribution-font-size: calc(11rem / var(--default-browser-size));
   --attribution-text-color: var(--very-dark-violet);
   --attribution-link-color: var(--very-dark-violet);
+
+  /* shorthand */
+  --1px: calc(1em / var(--em-divider));
+  --2px: calc(2em / var(--em-divider));
 }
