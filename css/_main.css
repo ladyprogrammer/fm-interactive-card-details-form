@@ -1,3 +1,5 @@
+@import "./_thanks.css";
+
 .main {
   grid-area: form;
   position: relative;
@@ -15,6 +17,10 @@
     "button button button";
 }
 
+.card-form--hide {
+  display: none;
+}
+
 .card-form__input-error {
   color: var(--red);
   text-transform: initial;
@@ -27,6 +33,14 @@
 
 .show-error .card-form__input {
   border-color: var(--red);
+}
+
+.card-form__input:focus {
+  border-color: var(--very-dark-violet);
+}
+
+.card-form__input:hover {
+  cursor: pointer;
 }
 
 .card-form__cardholder {
@@ -49,6 +63,10 @@
 
 .card-form__cvc {
   grid-area: cvc;
+}
+
+.card-form__cvc .card-form__input {
+  text-transform: uppercase;
 }
 
 .card-form__confirm-button {
