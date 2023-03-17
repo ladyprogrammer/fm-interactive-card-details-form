@@ -14,9 +14,7 @@ This is a solution to the [Interactive card details form challenge on Frontend M
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -33,15 +31,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -52,64 +43,35 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- HTML5
+- CSS
+- Vanilla Javascript
+I picked these technologies as I don't feel the need to use fancier frameworks/libraries.
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Explored more of Javascript - converted initial JS code to more modern ES6 format.
+Explored more of CSS3 that works on most modern browsers - updated to the use of calc() in getting rem and em sizing to replace older 62.5% HTML trick, use of custom properties.
+Review and deep dive into event driven programming.
+Exercised on refactoring code. Sure the code can further be optimized, but it is also part of the exercise when to stop and just deliver the code out there.
+It's too easy to write bad code in JavaScript if you have not experienced writing in other typed languages. Typescript could be great alternative to avoid such issues.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+My current focus is mainly developing web applications using Angular which I am doing professionally, though I have plans to learn React if I have time. I'm doing the challenges to continuously update myself.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [CSS Grid | CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) - Handy reference and guide I have bookmarked.
+- [CSS Flexbox | CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Handy reference and guide like the above link.
+- [CSS Custom Properties | CSS Tricks](https://css-tricks.com/a-complete-guide-to-custom-properties/) - Have to think less of SASS and tried out this one. It's easier to read and spot the double dash variables!
+- [Refactoring HTML and CSS | 1WD](https://1stwebdesigner.com/refactoring-html-and-css/) - I didn't use most of the techniques most especially the comments and decided to split the CSS into several files instead. I just prefer to write more code that speaks what it does than updating the comments that go along with it.
+- [Caniuse](https://caniuse.com/) - Must bookmark. Handy tool for checking cross browser compatibility so you don't have to manually check every browser every time before you use them in code.
+- [Regular Expressions](https://regex101.com/) - Must bookmark. Handy tool for writing regular expressions.
+- [JavaScript String Methods | W3Schools](https://www.w3schools.com/js/js_string_methods.asp) - Still relevant and updated, what I like best about the site is that I can try out the simple examples and modify them.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [Gem](https://www.frontendmentor.io/profile/ladyprogrammer)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
