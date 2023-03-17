@@ -3,6 +3,7 @@ import { confirmCardDetails, updateRealtimeCardDigits } from "./_ui.js";
 export const cardFields = {
   cardholder: {
     field: document.cardForm.cardholder,
+    isEmptyOK: false,
   },
   cardNumber: {
     field: document.cardForm.cardNumber,
@@ -37,7 +38,8 @@ export function formSubmit(event) {
 };
 
 export function validateForm(event) {
-  const { cardNumber, expiryDate, cvc } = cardFields;
+  const { cardholder, cardNumber, expiryDate, cvc } = cardFields;
+  checkInput(cardholder);
   checkInput(cardNumber);
   checkInput(expiryDate.month);
   const expiryFieldset = document.querySelector(expiryDate.year.customErrorClass);
