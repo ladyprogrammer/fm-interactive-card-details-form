@@ -1,9 +1,10 @@
+@import "./_thanks.css";
+
 .main {
   grid-area: form;
   position: relative;
   padding: 25px;
   color: var(--very-dark-violet);
-  margin-top: 250px;
 }
 
 .card-form {
@@ -14,6 +15,32 @@
     "digits digits digits"
     "expiry expiry cvc"
     "button button button";
+}
+
+.card-form--hide {
+  display: none;
+}
+
+.card-form__input-error {
+  color: var(--red);
+  text-transform: initial;
+  display: none;
+}
+
+.show-error .card-form__input-error {
+  display: initial;
+}
+
+.show-error .card-form__input {
+  border-color: var(--red);
+}
+
+.card-form__input:focus {
+  border-color: var(--very-dark-violet);
+}
+
+.card-form__input:hover {
+  cursor: pointer;
 }
 
 .card-form__cardholder {
@@ -38,6 +65,10 @@
   grid-area: cvc;
 }
 
+.card-form__cvc .card-form__input {
+  text-transform: uppercase;
+}
+
 .card-form__confirm-button {
   grid-area: button;
   padding: 15px;
@@ -47,3 +78,9 @@
   border-radius: 10px;
 }
 
+
+@media (min-width: 1440px) {
+  .main {
+    margin-top: 250px;
+  }
+}

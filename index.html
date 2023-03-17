@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Interactive card details form | Frontend Mentor</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
@@ -23,40 +23,55 @@
       <span class="card-front__card-digits card-front__card-digits-3">0000</span>
       <span class="card-front__card-digits card-front__card-digits-4">0000</span>
       <span class="card-front__cardholder">Jane Appleseed</span>
-      <span class="card-front__expiry-date">00/00</span>
+      <span class="card-front__expiry-date">
+        <span class="card-front__expiry-date-mm">00</span>/<span class="card-front__expiry-date-yy">00</span>
+      </span>
     </div>
   </header>
 
   <main class="main">
-    <form class="card-form" method="post" action="#">
+    <form class="card-form" method="post" action="/" name="cardForm">
       <label class="card-form__cardholder">
         Cardholder name
-        <input placeholder="e.g. Jane Appleseed">
+        <input placeholder="e.g. Jane Appleseed" name="cardholder" class="card-form__input">
+        <small class="card-form__input-error">Can't be blank</small>
       </label>
       <label class="card-form__card-number">
         Card Number
-        <input placeholder="e.g. 1234 5678 9123 0000">
+        <input placeholder="e.g. 1234 5678 9123 0000" name="cardNumber" class="card-form__input">
+        <small class="card-form__input-error">Wrong format, numbers only</small>
       </label>
       <fieldset class="card-form__expiry-date">
         <legend>Exp. Date (mm/yy)</legend>
         <label class="card-form__expiry-date-mm">
-          <input placeholder="MM" pattern="[0-9]{2}" maxlength="2">
+          <input placeholder="MM" maxlength="2" name="expiryMonth" class="card-form__input">
+          <small class="card-form__input-error">Can't be blank</small>
         </label>
         <label class="card-form__expiry-date-yy"> 
-          <input placeholder="YY" pattern="[0-9]{2}" maxlength="2">
+          <input placeholder="YY" maxlength="2" name="expiryYear" class="card-form__input">
         </label>
       </fieldset>
       <label class="card-form__cvc">
         CVC
-        <input placeholder="e.g. 123" maxlength="3">
+        <input placeholder="e.g. 123" maxlength="3" name="cvc"  class="card-form__input">
+        <small class="card-form__input-error">Can't be blank</small>
       </label>
-      <button class="card-form__confirm-button">Confirm</button>
+      <button class="card-form__confirm-button" name="confirmButton">Confirm</button>
     </form>
+
+    <section class="thanks">
+      <img src="./assets/images/icon-complete.svg" alt="icon-complete">
+      <h1 class="thanks__title">Thank you!</h1>
+      <p class="thanks__description">We've added your card details</p>
+      <button class="thanks__continue-button">Continue</button>
+    </section>
   </main>
 
   <footer class="attribution">
     Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a class="attribution__link" href="https://www.frontendmentor.io/profile/ladyprogrammer">Gem</a>.
   </footer>
+
+  <script src="js/main.js" type="module"></script>
 </body>
 </html>

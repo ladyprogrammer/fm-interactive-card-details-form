@@ -1,8 +1,8 @@
 :root {
-  --mobile-card-width: calc(285em / var(--default-font-size));
-  --mobile-card-height: calc(160em / var(--default-font-size));
-  --desktop-card-width: calc(450em / var(--default-font-size));
-  --desktop-card-height: calc(245em / var(--default-font-size));
+  --mobile-card-width: calc(285em / var(--em-divider));
+  --mobile-card-height: calc(160em / var(--em-divider));
+  --desktop-card-width: calc(450em / var(--em-divider));
+  --desktop-card-height: calc(245em / var(--em-divider));
 }
 
 .header {
@@ -16,13 +16,13 @@
   .header {
     display: initial;
     position: relative;
-    height: 300px;
+    height: 310px;
   }
   
   .card-back {
     position: absolute;
-    top: calc(30em / var(--default-font-size));
-    left: calc(70em / var(--default-font-size));
+    top: calc(30em / var(--em-divider));
+    left: calc(70em / var(--em-divider));
     width: var(--mobile-card-width);
     height: var(--mobile-card-height);
     background: url('/assets/images/bg-card-back.png') no-repeat;
@@ -32,16 +32,17 @@
   .card-back__cvv {
     color: var(--white);
     position: absolute;
-    top: calc(125em / var(--default-font-size));
-    right: calc(60em / var(--default-font-size));
-    font-size: calc(10em / var(--default-font-size));
+    top: calc(125em / var(--em-divider));
+    right: calc(60em / var(--em-divider));
+    font-size: calc(10em / var(--em-divider));
+    text-transform: uppercase;
   }
   
   .card-front {
     color: var(--white);
     position: absolute;
-    top: calc(130em / var(--default-font-size));
-    left: calc(15em / var(--default-font-size));
+    top: calc(130em / var(--em-divider));
+    left: calc(15em / var(--em-divider));
     width: var(--mobile-card-width);
     height: var(--mobile-card-height);
     background: url('/assets/images/bg-card-front.png') no-repeat;
@@ -53,8 +54,8 @@
       "circle . . ."
       "digits-1 digits-2 digits-3 digits-4"
       "name name name expiry";
-    gap: calc(10em / var(--default-font-size));
-    padding: calc(20em / var(--default-font-size));
+    gap: calc(10em / var(--em-divider));
+    padding: calc(20em / var(--em-divider));
     justify-content: space-evenly;
   }
   
@@ -66,7 +67,7 @@
   }
   
   .card-front__circle-filled {
-    --circle-diameter: calc(30em / var(--default-font-size));
+    --circle-diameter: calc(30em / var(--em-divider));
     height: var(--circle-diameter);
     width: var(--circle-diameter);
     border-radius: 50%;
@@ -74,7 +75,7 @@
   }
   
   .card-front__circle-empty {
-    --circle-diameter: calc(12em / var(--default-font-size));
+    --circle-diameter: calc(12em / var(--em-divider));
     height: var(--circle-diameter);
     width: var(--circle-diameter);
     border-radius: 50%;
@@ -83,7 +84,7 @@
   }
   
   .card-front__card-digits {
-    letter-spacing: calc(2rem / var(--default-browser-size));
+    letter-spacing: calc(2rem / var(--rem-divider));
     align-self: self-end;
   }
   
@@ -106,14 +107,14 @@
   .card-front__cardholder {
     grid-area: name;
     text-transform: uppercase;
-    font-size: calc(10rem / var(--default-browser-size));
+    font-size: calc(10rem / var(--rem-divider));
     opacity: 0.7;
-    letter-spacing: calc(1rem / var(--default-browser-size));
+    letter-spacing: calc(1rem / var(--rem-divider));
   }
   
   .card-front__expiry-date {
     grid-area: expiry;
-    font-size: calc(11rem / var(--default-font-size));
+    font-size: calc(11rem / var(--em-divider));
     opacity: 0.7;
     justify-self: right;
   }
@@ -124,29 +125,54 @@
 @media (min-width: 1440px) {
   .header {
     height: initial;
-    width: 800px;
+    /* width: calc(800em / var(--em-divider)); */
   }
 
   .card-back {
-    top: calc(470em / var(--default-browser-size));
-    left: calc(260em / var(--default-browser-size));
+    top: calc(470em / var(--em-divider));
+    left: calc(260em / var(--em-divider));
     width: var(--desktop-card-width);
     height: var(--desktop-card-height);
   }
 
   .card-back__cvv {
-    top: calc(111em / var(--default-browser-size));
-    right: calc(60em / var(--default-browser-size));
-    font-size: calc(14rem / var(--default-font-size));
-    letter-spacing: calc(2rem / var(--default-font-size));
+    top: calc(142em / var(--em-divider));
+    right: calc(60em / var(--em-divider));
+    font-size: calc(14rem / var(--rem-divider));
+    letter-spacing: calc(2rem / var(--rem-divider));
   }
 
   .card-front {
-    top: calc(185em / var(--default-browser-size));
-    left: calc(160em / var(--default-browser-size));
+    top: calc(185em / var(--em-divider));
+    left: calc(160em / var(--em-divider));
     width: var(--desktop-card-width);
     height: var(--desktop-card-height);
+    justify-content: space-around;
+    row-gap: calc(25em / var(--em-divider));
+    padding: calc(25em / var(--em-divider));
   }
 
+  .card-front__circle-filled {
+    --circle-diameter: calc(45em / var(--em-divider));
+  }
+
+  .card-front__circle-empty {
+    --circle-diameter: calc(20em / var(--em-divider));
+  }
+
+  .card-front__card-digits {
+    font-size: calc(26rem / var(--rem-divider));
+    letter-spacing: calc(4rem / var(--rem-divider));
+  }
+
+  .card-front__cardholder {
+    font-size: calc(14rem / var(--rem-divider));
+    letter-spacing: calc(2rem / var(--rem-divider));
+  }
+
+  .card-front__expiry-date {
+    font-size: calc(14rem / var(--rem-divider));
+    letter-spacing: calc(2rem / var(--rem-divider));
+  }
 
 }
